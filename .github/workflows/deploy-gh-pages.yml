@@ -6,6 +6,7 @@ on:
       - 'app/**'
     branches:
       - main
+  workflow_dispatch: {}
 
 jobs:
   deploy:

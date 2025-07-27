@@ -27,8 +27,8 @@ jobs:
 
       - name: Build and Export
         run: |
-          npm next build
-          npm next export
+          npm run build
+          npm run export
         working-directory: app
 
       - name: Deploy to GitHub Pages

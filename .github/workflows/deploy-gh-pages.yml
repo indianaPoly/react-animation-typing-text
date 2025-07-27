@@ -12,19 +12,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repo
+        uses: actions/checkout@v3
 
-      - name: Set up Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: 18
 
       - name: Install dependencies
         run: npm install
         working-directory: app
 
-      - name: Build project
-        run: npm run build
+      - name: Build and Export
+        run: |
+          npm run build
+          npm run export
         working-directory: app
 
       - name: Deploy to GitHub Pages

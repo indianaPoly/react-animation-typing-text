@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { TypingText } from "typechat";
+import { TypingText } from "react-animation-typing-text";
 
 export default function Home() {
   const [inputText, setInputText] = useState("");

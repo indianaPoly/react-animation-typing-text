@@ -19,6 +19,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
+          cache: "yarn"
 
       - name: Install dependencies
         run: npm install
@@ -26,7 +27,9 @@ jobs:
 
       - name: Build and Export
         run: |
-          npm run build
+          yarn
+          yarn build
+          yarn export
         working-directory: app
 
       - name: Deploy to GitHub Pages

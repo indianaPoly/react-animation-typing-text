@@ -1,0 +1,5 @@
+{
+  "name": "typechat-monorepo",
+  "private": true,
+  "workspaces": ["apps/*", "packages/*"]
+}

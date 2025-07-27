@@ -1,0 +1,8 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "typechat": ["./package/src"]
+        }
+    }
+}

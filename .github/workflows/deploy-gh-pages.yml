@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     paths:
-      - 'app/**'
+      - "app/**"
     branches:
       - main
   workflow_dispatch: {}
@@ -21,13 +21,18 @@ jobs:
         with:
           node-version: 18
 
+      - name: Inject Production Env Vars
+        run: |
+          echo "NEXT_PUBLIC_DEPLOY_ENV=production" >> .env
+          echo "NEXT_PUBLIC_BASE_PATH=https://indianapoly.github.io/react-animation-typing-text" >> .env
+        working-directory: app
+
       - name: Install dependencies
         run: npm install
         working-directory: app
 
       - name: Build
-        run: |
-          npm run build
+        run: npm run build
         working-directory: app
 
       - name: Deploy to GitHub Pages

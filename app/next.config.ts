@@ -1,8 +1,12 @@
-import type { NextConfig } from "next";
+const isProd = process.env.NEXT_PUBLIC_DEPLOY_ENV === "production";
 
-const nextConfig: NextConfig = {
-  assetPrefix: "https://indianapoly.github.io/react-animation-typing-text/",
-  output: 'export'
+const nextConfig = {
+  assetPrefix: isProd
+    ? "https://indianapoly.github.io/react-animation-typing-text/"
+    : undefined,
+  basePath: isProd ? "/react-animation-typing-text" : undefined,
+  output: isProd ? "export" : undefined,
+  trailingSlash: true,
 };
 
 export default nextConfig;

@@ -13,7 +13,8 @@
     "react": "19.1.0",
     "react-animation-typing-text": "^1.0.0",
     "react-dom": "19.1.0",
-    "typechat": "../package"
+    "typechat": "../package",
+    "zustand": "^5.0.6"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
